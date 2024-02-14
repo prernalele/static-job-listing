@@ -1,0 +1,64 @@
+@font-face {
+    font-family: fontSpartan;
+    src: url(./fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf)
+}
+
+body {
+    background-color: hsl(180, 52%, 96%);
+    font-family: fontSpartan;
+}
+
+#topHeader {
+    background-color:hsl(185, 52%, 77%);
+}
+
+#logo {
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+.jobRows {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-bottom: 20px;;
+    margin-top: 20px;
+    padding-left: 10px;
+    margin-right: 20px;
+    justify-content: space-between;
+    box-shadow: 0px 4px 5px 2px rgb(0 0 0 / 18%);
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;  
+}
+
+#companyName {
+    color: hsl(185, 53%, 46%);
+    font-weight: 500;
+}
+
+#role {
+    font-family:fontSpartan;
+    font-weight: 800;
+}
+.filterTags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    
+}
+.filterTags > span {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: aquamarine;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 10px;
+
+}

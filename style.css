@@ -13,26 +13,32 @@ body {
 }
 
 #logo {
-    padding-left: 0px;
-    margin-left: 0px;
+    padding: 10px;
+    width: 25%;
+    height: 95px;
+    margin-left: 25px;
+    margin-right: 0px;
+
 }
 
 .jobRows {
     background-color: white;
     display: flex;
     flex-direction: row;
-    margin-left: 40px;
-    margin-bottom: 20px;;
     margin-top: 20px;
-    padding-left: 10px;
     margin-right: 20px;
-    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    align-items: center;
+    justify-items: center;
     box-shadow: 0px 4px 5px 2px rgb(0 0 0 / 18%);
 }
 .details{
     display: flex;
     flex-direction: column;
     justify-content:flex-start;  
+    width: 25%;
+    margin-left: 0px;
 }
 
 #companyName {
@@ -40,25 +46,76 @@ body {
     font-weight: 500;
 }
 
-#role {
+#position {
     font-family:fontSpartan;
     font-weight: 800;
+    height: 30px;
+    width: 145px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.data-role {
+    background-color: blueviolet;
 }
 .filterTags {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-right: 10px;
-    
+    justify-content: right;
+    height: 100%;
+    width: 75%;  
+    margin: 10px 10px 10px 40px;
 }
 .filterTags > span {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: aquamarine;
-    border-radius: 20px;
+    flex-direction:column;
+    background-color: hsl(180, 52%, 96%);
+    color: hsl(180, 42%, 44%);
     padding: 5px;
-    margin: 10px;
+    margin: 2px;
 
 }
+
+.otherDetails {
+    display: flex;
+    color: grey;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: left;
+    margin-top: 10px;
+    padding:0px;
+    
+}
+
+.otherDetails > li {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    margin:2px;
+    padding: 2px;
+}
+
+#new {
+    color: white;
+    font-family: fontSpartan;
+    font-size: small;
+    background-color: hsl(180, 29%, 50%);
+    text-transform: uppercase;  
+    border-radius: 25px;
+    padding-bottom:2px;
+    padding-top: 5px;
+    padding-left: 5px;
+    margin-right: 5px;  
+}
+
+#featured {
+    background-color:  hsl(180, 8%, 52%);
+    border-radius: 25px ;
+    color: white;
+    text-transform: uppercase;
+    font-size: small;
+    padding: 5px;
+    padding-bottom: 3px;
+    margin-left: 5px;
+
+}
+

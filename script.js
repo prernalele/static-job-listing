@@ -14,7 +14,7 @@ bodyTag = document.getElementById("")
     }) */
 
 
- const listingOne = document.getElementById("1")
+/*  const listingOne = document.getElementById("1")
 
 console.log(listingOne.dataset)
 
@@ -24,5 +24,14 @@ console.log("jobListArray", jobListArray)
 console.log('jobListArray keys', Object.keys(listingOne.dataset))
 
 listingOne.innerHTML = Object.keys(listingOne.dataset)[0]
-listingOne.inner 
+listingOne.inner */ 
+const listOfRoles = document.getElementsByClassName("role")
+const jobRows = document.getElementsByClassName("jobRows")
+console.log(listOfRoles[0].dataset["role"])
 
+for (i = 0; i < jobRows.length; i++) {
+  arrayOfRoles = [];
+  console.log(listOfRoles[i].dataset["role"]);
+  const roleName = listOfRoles[i].dataset["role"];
+  arrayOfRoles.push(roleName);
+}

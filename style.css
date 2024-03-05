@@ -72,7 +72,6 @@ body {
     color: hsl(180, 42%, 44%);
     padding: 5px;
     margin: 2px;
-
 }
 
 .otherDetails {
@@ -124,6 +123,23 @@ body {
 }
 
 .hidden {
-    visibility: hidden;
+    display: none;
+}
+
+.rowContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter  {
+    display: flex;
+    flex-direction: left;
+}
+
+.clearButton {
+    background-color: hsl(180, 52%, 96%);
+    color: hsl(185, 53%, 46%);
+    border: none;
+
 }
 

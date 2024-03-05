@@ -24,9 +24,9 @@
   </div>
   <div class="filter">
     <div class="pickedFilterTags"></div>
-    <div class="Clear">Clear</div>
+    <button class="clearButton" >Clear</button>
   </div>
-  <div>
+  <div class="rowContainer">
     <div class="jobRows">
       <p id="logo">
         <img src="./images/photosnap.svg" />
@@ -46,10 +46,10 @@
       </div>
       <p class="filterTags">
         <span class="role"  data-role="frontend" onClick="filterFunction('role', this)">Frontend</span>
-        <span class="level" data-level="senior">Senior</span>
-        <span class="languages">HTML</span>
-        <span class="languages">CSS</span>
-        <span class="languages">Javascript</span>    
+        <span class="level" data-level="senior" onClick="filterFunction('level', this)">Senior</span>
+        <span class="languages" data-languages="html,css,js" onClick="filterFunction('languages', this)">HTML</span>
+        <span class="languages" data-languages="html,css,js" onClick="filterFunction('languages', this)">CSS</span>
+        <span  class="languages" data-languages="html,css,js" onClick="filterFunction('languages', this)">Javascript</span>  
       </p>
     </div>
     <div class="jobRows">
@@ -71,10 +71,10 @@
       </div>
       <p class="filterTags">
         <span class="role" data-role="frontend">Frontend</span>
-        <span class="level" data-level="senior">Senior</span>
-        <span class="languages">HTML</span>
-        <span class="languages">CSS</span>
-        <span class="languages">Javascript</span>    
+        <span class="level" data-level="midweight">Midweight</span>
+        <span class="languages" data-languages="html,css,js" onClick="filterFunction('languages', this)">HTML</span>
+        <span class="languages" data-languages="html,css,js" onClick="filterFunction('languages', this)">CSS</span>
+        <span class="languages" data-languages="html,css,js" onClick="filterFunction('languages', this)">Javascript</span>    
       </p>
     </div>
     <div class="jobRows">
@@ -96,9 +96,9 @@
       <p class="filterTags">
         <span class="role" data-role="frontend">Frontend</span> 
         <span class="level" data-level="junior">Junior</span>
-        <span class="languages">JavaScript</span>  
-        <span class="tools">React</span>
-        <span class="tools">Sass</span>
+        <span class="languages" data-languages="js" onClick="filterFunction('languages', this)">JavaScript</span>  
+        <span class="tools" data-tools="react,sass" onClick="filterFunction('tools', this)">React</span>
+        <span class="tools" data-tools="react,sass" onClick="filterFunction('tools', this)">Sass</span>
       </p>
     </div>
     <div class="jobRows">
@@ -119,9 +119,9 @@
       <p class="filterTags">
         <span class="role" data-role="frontend">Frontend</span> 
         <span class="level" data-level="junior">Junior</span>
-        <span class="languages">JavaScript</span>  
-        <span class="tools">React</span>
-        <span class="tools">Sass</span>
+        <span class="languages" data-languages="js" onClick="filterFunction('languages', this)">JavaScript</span>  
+        <span class="tools" data-tools="react,sass" onClick="filterFunction('tools', this)">React</span>
+        <span class="tools" data-tools="react,sass" onClick="filterFunction('tools', this)">Sass</span>
       </p>
     </div>
     <div class="jobRows">
@@ -142,9 +142,9 @@
       <p class="filterTags">
         <span class="role" data-role="fullstack">Fullstack</span> 
         <span class="level" data-level="midweight">Midweight</span>
-        <span class="languages">JavaScript</span>  
-        <span class="languages">Ruby</span>
-        <span class="tools">Sass</span>
+        <span class="languages" data-languages="js,ruby" onClick="filterFunction('languages', this)">JavaScript</span>  
+        <span class="languages" data-languages="js,ruby" onClick="filterFunction('languages', this)">Ruby</span>
+        <span class="tools" data-tools="sass" onClick="filterFunction('tools', this)">Sass</span>
       </p>
     </div>
     <div class="jobRows">
@@ -165,11 +165,11 @@
       <p class="filterTags">
         <span class="role" data-role="backend">Backend</span> 
         <span class="level" data-level="junior">Junior</span>
-        <span class="languages">Ruby</span>
-        <span class="tools">RoR</span>
+        <span class="languages" data-languages="ruby" onClick="filterFunction('languages', this)">Ruby</span>
+        <span class="tools" data-tools="ror" onClick="filterFunction('tools', this)">RoR</span>
       </p>
     </div>
-    <div class="jobRows">
+    <div class="jobRows" >
       <p id="logo">
         <img src="./images/shortly.svg" />
       </p>
@@ -187,9 +187,9 @@
       <p class="filterTags">
         <span class="role" data-role="frontend">Frontend</span> 
         <span class="level" data-level="junior">Junior</span>
-        <span class="languages">HTML</span>
-        <span class="languages">JavaScript</span>
-        <span class="tools">Sass</span>
+        <span class="languages" data-languages="html,js" onClick="filterFunction('languages', this)">HTML</span>
+        <span class="languages" data-languages="html,js" onClick="filterFunction('languages', this)">JavaScript</span>
+        <span class="tools" data-tools="sass" onClick="filterFunction('tools', this)">Sass</span>
       </p>
     </div>
     <div class="jobRows">
@@ -210,9 +210,9 @@
       <p class="filterTags">
         <span class="role" data-role="frontend">Frontend</span> 
         <span class="level" data-level="junior">Junior</span>
-        <span class="languages">JavaScript</span>
-        <span class="tools">Vue</span>
-        <span class="tools">Sass</span>
+        <span class="languages" data-languages="js" onClick="filterFunction('languages', this)">JavaScript</span>
+        <span class="tools" data-tools="vue,sass" onClick="filterFunction('tools', this)">Vue</span>
+        <span class="tools" data-tools="vue,sass" onClick="filterFunction('tools', this)">Sass</span>
       </p>
     </div>
     <div class="jobRows">
@@ -233,9 +233,9 @@
       <p class="filterTags">
         <span class="role" data-role="fullstack">Fullstack</span> 
         <span class="level" data-level="midweight">Midweight</span>
-        <span class="languages">JavaScript</span>
-        <span class="languages">Python</span>
-        <span class="tools">Django</span>
+        <span class="languages" data-languages="js,python" onClick="filterFunction('languages', this)">JavaScript</span>
+        <span class="languages" data-languages="js,python" onClick="filterFunction('languages', this)">Python</span>
+        <span class="tools" data-tools="django" onClick="filterFunction('tools', this)">Django</span>
       </p>
     </div>
     <div class="jobRows">
@@ -256,9 +256,9 @@
       <p class="filterTags">
         <span class="role" data-role="frontend" >Frontend</span> 
         <span class="level" data-level="junior">Junior</span>
-        <span class="languages">JavaScript</span>
-        <span class="tools">React</span>
-        <span class="tools">Sass</span>
+        <span class="languages" data-languages="js" onClick="filterFunction('languages', this)">JavaScript</span>
+        <span class="tools" data-tools="react,sass" onClick="filterFunction('tools', this)">React</span>
+        <span class="tools" data-tools="react,sass" onClick="filterFunction('tools', this)">Sass</span>
       </p>
     </div>
     

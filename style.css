@@ -49,8 +49,10 @@ body {
 #position {
     font-family:fontSpartan;
     font-weight: 800;
-    height: 30px;
-    width: 145px;
+    /* height: 30px;
+    width: 145px; */
+    height: 50%;
+    width: 100%;
     margin: 0px;
     padding: 0px;
 }
@@ -63,7 +65,7 @@ body {
     justify-content: right;
     height: 100%;
     width: 75%;  
-    margin: 10px 10px 10px 40px;
+    margin: 10px 40px;
 }
 .filterTags > span {
     display: flex;
@@ -71,7 +73,7 @@ body {
     background-color: hsl(180, 52%, 96%);
     color: hsl(180, 42%, 44%);
     padding: 5px;
-    margin: 2px;
+    margin: 8px;
 }
 
 .otherDetails {
@@ -81,6 +83,7 @@ body {
     justify-content: space-around;
     align-items: left;
     margin-top: 10px;
+    margin-left: -30px;
     padding:0px;
     
 }

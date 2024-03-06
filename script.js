@@ -45,10 +45,12 @@ function filterFunction(filterKey, element) {
 
   // run filter function on this array to form an array of the ones that don't match with filter value
 
-  filteredOutRows = filterKeyClassAllArray.filter(
-    (row) =>
-      !(row.dataset[filterKey] && row.dataset[filterKey].includes(filterValue))
-  );
+  filteredOutRows = filterKeyClassAllArray.filter((row) => {
+    if (filterKey in row.dataset) {
+      console.log(row.dataset[filterKey].includes(filterValue));
+      return !row.dataset[filterKey].includes(filterValue);
+    }
+  });
 
   console.log("filterdOutRows", filteredOutRows);
   console.log("noClassArray", noClassArray);

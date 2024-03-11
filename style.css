@@ -60,6 +60,22 @@ body {
 .data-role {
     background-color: blueviolet;
 }
+.filter {
+    background-color: white;
+
+}
+.pickedFilterTags {
+    display: flex;
+    flex-direction: row;
+}
+
+.pickedFilterTags > span{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    padding: 10px;
+    color: hsl(180, 42%, 44%);
+}
 .filterTags {
     display: flex;
     justify-content: right;
@@ -140,7 +156,9 @@ body {
 }
 
 .clearButton {
-    background-color: hsl(180, 52%, 96%);
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
     color: hsl(185, 53%, 46%);
     border: none;
 

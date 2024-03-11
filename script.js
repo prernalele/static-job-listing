@@ -13,7 +13,7 @@ clearButton.addEventListener("click", (event) => {
   filteredOutRows = [];
   displayFilterSelection(filterValue);
   const hiddenRows = Array.from(document.querySelectorAll(".hidden"));
-  hiddenRows.forEach((row) => row.classList.replace("hidden", "jobRows"));
+  hiddenRows.forEach((row) => row.classList.remove("hidden"));
   return;
 });
 
@@ -26,7 +26,7 @@ function displayFilterSelection(filterValue) {
   for (i = 0; i < filterArray.length; i++) {
     const newFilterElement = document.createElement("span");
     pickedFilterSection.appendChild(newFilterElement);
-    const newFilterText = document.createTextNode(filterValue);
+    const newFilterText = document.createTextNode(filterValue.toUpperCase());
     return newFilterElement.appendChild(newFilterText);
   }
   if (filterArray.length === 0) {
@@ -72,15 +72,11 @@ function filterFunction(filterKey, element) {
 
   filteredOutRows = filterKeyClassAllArray.filter((row) => {
     if (filterKey in row.dataset) {
-      console.log(row.dataset[filterKey].includes(filterValue));
       return !row.dataset[filterKey].includes(filterValue);
     }
   });
 
-  console.log("filterdOutRows", filteredOutRows);
-  console.log("noClassArray", noClassArray);
   const finalFilteredOutList = filteredOutRows.concat(noClassArray);
-  console.log("finalFilteredOutList", finalFilteredOutList);
   finalFilteredOutList.map((row) => {
     return (
       row.parentNode.parentNode.classList.add("hidden") ||

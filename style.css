@@ -61,7 +61,11 @@ body {
     background-color: blueviolet;
 }
 .filter {
+    margin: 10px;
+    justify-content: flex-end;
     background-color: white;
+    height:40%;
+    width: 100%;
 
 }
 .pickedFilterTags {
@@ -157,10 +161,13 @@ body {
 
 .clearButton {
     display: flex;
-    justify-content: right;
-    align-items: flex-end;
-    color: hsl(185, 53%, 46%);
+    justify-content: flex-end;
+    align-items: center;
+    color: black;
     border: none;
+    padding: 2px;
+    margin: 5px;
+    background-color: white;
 
 }
 

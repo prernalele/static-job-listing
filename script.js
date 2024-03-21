@@ -11,7 +11,7 @@ clearButton.addEventListener("click", (event) => {
   console.log("event", event);
   filterValue = "";
   filteredOutRows = [];
-  displayFilterSelection(filterValue);
+  displayFilterSelection("");
   const hiddenRows = Array.from(document.querySelectorAll(".hidden"));
   hiddenRows.forEach((row) => row.classList.remove("hidden"));
   return;
@@ -24,13 +24,28 @@ function displayFilterSelection(filterValue) {
   } else filterArray = [filterValue];
 
   for (i = 0; i < filterArray.length; i++) {
-    const newFilterElement = document.createElement("span");
-    pickedFilterSection.appendChild(newFilterElement);
+    const newFilterContainer = document.createElement("span");
+    newFilterContainer.classList.add("filterSpan");
+
+    const pickedFilterText = document.createElement("span");
+
+    const dismissButton = document.createElement("button");
+    dismissButton.classList.add("dissmissFilter");
+    dismissButton.innerHTML = "&times";
+
+    pickedFilterSection.appendChild(newFilterContainer);
     const newFilterText = document.createTextNode(filterValue.toUpperCase());
-    return newFilterElement.appendChild(newFilterText);
+
+    /* const filterPicked = newFilterElement.appendChild(newFilterText);
+    filterPicked.appendChild(dismissFilter); */
+    pickedFilterText.appendChild(newFilterText);
+
+    newFilterContainer.appendChild(pickedFilterText);
+    newFilterContainer.appendChild(dismissButton);
   }
   if (filterArray.length === 0) {
-    const childElementsToClear = pickedFilterSection.querySelectorAll("span");
+    const childElementsToClear =
+      pickedFilterSection.querySelectorAll(".filterSpan");
 
     for (i = 0; i < childElementsToClear.length; i++)
       pickedFilterSection.removeChild(childElementsToClear[i]);

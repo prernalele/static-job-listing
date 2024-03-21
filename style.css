@@ -76,9 +76,11 @@ body {
 .pickedFilterTags > span{
     display: flex;
     justify-content: left;
-    flex-direction: column;
+    flex-direction: row;
     padding: 10px;
+    background-color: hsl(180, 52%, 96%);
     color: hsl(180, 42%, 44%);
+    margin: 5px;
 }
 .filterTags {
     display: flex;
@@ -88,6 +90,7 @@ body {
     margin: 10px 40px;
 }
 .filterTags > span {
+    cursor: pointer;
     display: flex;
     flex-direction:column;
     background-color: hsl(180, 52%, 96%);
@@ -170,4 +173,15 @@ body {
     background-color: white;
 
 }
+
+.filterSpan > button {
+    border: none;
+    outline: none;
+    background-color: hsl(180, 52%, 96%);
+    color: hsl(180, 42%, 44%);
+    padding: 0px;
+    margin-left: 4px;
+}
+
+
 

@@ -18,9 +18,18 @@ clearButton.addEventListener("click", (event) => {
 
 function displayFilterSelection(filterValue) {
   let filterArray;
+  const allPcikedFilters = [];
   if (filterValue === "") {
     filterArray = [];
-  } else filterArray = [filterValue];
+  } else if (
+    allPcikedFilters.includes(filterValue) ||
+    allPcikedFilters.length === 0
+  ) {
+    filterArray = [filterValue];
+  }
+  allPcikedFilters.push(filterValue);
+
+  //else filterArray = [filterValue];
 
   for (i = 0; i < filterArray.length; i++) {
     const newFilterContainer = document.createElement("span");

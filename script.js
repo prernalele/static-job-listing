@@ -2,6 +2,7 @@
 let filterValue;
 let filteredOutRows = [];
 let noClassArray = [];
+let allPickedFilters = [];
 
 const rowContainer = document.querySelector(".rowContainer");
 const clearButton = document.querySelector(".clearButton");
@@ -10,6 +11,7 @@ const pickedFilterSection = document.querySelector(".pickedFilterTags");
 clearButton.addEventListener("click", (event) => {
   filterValue = "";
   filteredOutRows = [];
+  allPickedFilters.length = 0;
   displayFilterSelection("");
   const hiddenRows = Array.from(document.querySelectorAll(".hidden"));
   hiddenRows.forEach((row) => row.classList.remove("hidden"));
@@ -18,18 +20,13 @@ clearButton.addEventListener("click", (event) => {
 
 function displayFilterSelection(filterValue) {
   let filterArray;
-  const allPcikedFilters = [];
+
   if (filterValue === "") {
     filterArray = [];
-  } else if (
-    allPcikedFilters.includes(filterValue) ||
-    allPcikedFilters.length === 0
-  ) {
+  } else {
     filterArray = [filterValue];
+    allPickedFilters.push(filterValue);
   }
-  allPcikedFilters.push(filterValue);
-
-  //else filterArray = [filterValue];
 
   for (i = 0; i < filterArray.length; i++) {
     const newFilterContainer = document.createElement("span");
@@ -70,8 +67,10 @@ function displayFilterSelection(filterValue) {
 function filterFunction(filterKey, element) {
   // the text value that got clicked and needs to be filter by
   filterValue = element.textContent.toLowerCase();
+
   //call a method to display selected filter
-  displayFilterSelection(filterValue);
+  !allPickedFilters.includes(filterValue) &&
+    displayFilterSelection(filterValue);
 
   // grab every span that's in filter section
   // filterKeyClassAll = document.querySelectorAll("." + filterKey);

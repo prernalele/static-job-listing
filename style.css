@@ -62,7 +62,7 @@ body {
 }
 .filter {
     margin: 10px;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: white;
     height:40%;
     width: 100%;
@@ -97,6 +97,11 @@ body {
     color: hsl(180, 42%, 44%);
     padding: 5px;
     margin: 8px;
+}
+
+.filterTags > span:hover {
+    background-color: hsl(180, 42%, 44%);
+    color: white;
 }
 
 .otherDetails {
@@ -182,6 +187,7 @@ body {
     padding: 0px;
     margin-left: 4px;
 }
+
 
 
 

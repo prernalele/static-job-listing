@@ -8,7 +8,6 @@ const clearButton = document.querySelector(".clearButton");
 const pickedFilterSection = document.querySelector(".pickedFilterTags");
 
 clearButton.addEventListener("click", (event) => {
-  console.log("event", event);
   filterValue = "";
   filteredOutRows = [];
   displayFilterSelection("");
@@ -29,9 +28,16 @@ function displayFilterSelection(filterValue) {
 
     const pickedFilterText = document.createElement("span");
 
+    //create an individual x button for filters
     const dismissButton = document.createElement("button");
     dismissButton.classList.add("dissmissFilter");
+    //to add a multiplication symbol
     dismissButton.innerHTML = "&times";
+    // makes dismiss or x button functional
+    dismissButton.addEventListener("click", (event) => {
+      const parentOfCurrentElement = event.target.parentNode;
+      parentOfCurrentElement.remove();
+    });
 
     pickedFilterSection.appendChild(newFilterContainer);
     const newFilterText = document.createTextNode(filterValue.toUpperCase());

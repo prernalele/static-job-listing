@@ -43,6 +43,10 @@ function displayFilterSelection(filterValue) {
     dismissButton.addEventListener("click", (event) => {
       const parentOfCurrentElement = event.target.parentNode;
       parentOfCurrentElement.remove();
+      const filterToRemove =
+        event.target.parentNode.firstChild.textContent.toLowerCase();
+      allPickedFilters.pop(filterToRemove);
+
     });
 
     pickedFilterSection.appendChild(newFilterContainer);

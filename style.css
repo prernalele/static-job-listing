@@ -188,6 +188,11 @@ body {
     margin-left: 4px;
 }
 
+.dissmissFilter:hover {
+    background-color: hsl(180, 8%, 52%);
+    color: white;
+}
+
 
 
 
